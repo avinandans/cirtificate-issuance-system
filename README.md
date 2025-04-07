@@ -46,4 +46,4 @@ Preview and download the final certificate as a new PDF.
   npm run dev
 
 #Live Demo URL
-https://cirtificate-issua-git-784deb-avithedesigner99gmailcoms-projects.vercel.app/
+https://cirtificate-issuance-system-f42s.vercel.app/certificate/fill-details
