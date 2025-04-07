@@ -1,0 +1,118 @@
+@import '../../../assets/variables';
+
+.certificate-editor {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    margin-bottom: 1rem;
+  }
+
+  .certificate-preview {
+    position: relative;
+    display: inline-block;
+
+    .lobster {
+      font-family: "Lobster", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    img {
+      width: 100%;
+      max-width: 1000px;
+      display: block;
+    }
+
+    .draggable {
+      position: absolute;
+      cursor: move;
+      font-size: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      touch-action: none;
+    }
+
+    .cName {
+      font-family: 'Lobster';
+      font-size: 4rem;
+    }
+
+    .cDesc, .cName, .cCourse, .cTenure {
+      max-width: 70%;
+    }
+
+    .cQr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  @media (max-width: $breakpoint-laptop) {
+    .certificate-preview {
+      .draggable {
+        font-size: 1.3rem;
+      }
+      .cName {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .certificate-preview {
+      img {
+        max-width: 90vw;
+      }
+
+      .draggable {
+        font-size: 1.2rem;
+      }
+      .cName {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0.5rem;
+
+    .certificate-preview {
+      img {
+        max-width: 95vw;
+      }
+
+      .draggable {
+        font-size: .5rem;
+      }
+
+      .cName {
+        font-size: 1.2rem;
+      }
+
+      .cQr {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+}
