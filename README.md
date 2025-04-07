@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+#Certificate Issuance System (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-responsive Certificate Issuance System built using React.js that allows users to:
+Create and manage certification course details.
+Upload a PDF certificate template.
+Drag and drop QR code and certificate details (like candidate name, course name, etc.) onto the PDF.
+Preview and download the final certificate as a new PDF.
 
-Currently, two official plugins are available:
+*Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Course Creation
+  Fill in Candidate Name, Course Name, Course ID, Dates, and Description.
+  Form validation included (without Formik/Yup).
+  View courses in a table with edit and delete options.
 
-## Expanding the ESLint configuration
+2. PDF Upload + Editor
+  Upload your certificate background (PDF file).
+  Render the PDF in the browser.
+  Drag and drop:
+  QR code (auto-generated from Course ID)
+  Candidate Name
+  Course Name
+  Course ID
+  Tenure Dates
+  Description
+  Positions are saved to local storage.
+  Responsive UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Certificate Export
+  Live preview of certificate.
+  Download final certificate as a PDF with all data in place.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#Tech Stack
+  React.js 
+  SCSS for styling
+  react-pdf for PDF rendering
+  qrcode.react for QR code generation
+  html2canvas + jsPDF for PDF export
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#Setup Instructions
+1. Clone the Repository
+   git clone https://github.com/avinandans/cirtificate-issuance-system.git
+2. Install Dependencies
+   npm install
+3. Start the Application
+  npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+#Live Demo URL
+https://cirtificate-issua-git-784deb-avithedesigner99gmailcoms-projects.vercel.app/
