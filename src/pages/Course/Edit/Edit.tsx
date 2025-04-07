@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useMemo } from "react";
 import CourseForm from "../../../components/CourseForm/CourseForm";
 import { useCourseContext } from "../../../contexts/CourseContext";
 import { useSearchParams } from "react-router-dom";
 
 const Edit: React.FC = () => {
-  const { courses } = useCourseContext();
+  const { courses = [] } = useCourseContext();
   const [searchParams] = useSearchParams();
-  const id = searchParams.get("id");
+  const courseId = searchParams.get("id");
 
-  const selectedCourse = courses.find((course) => course.id === id);
-  console.log(selectedCourse)
+  const selectedCourse = useMemo(
+    () => courses.find((course) => course.id === courseId),
+    [courses, courseId]
+  );
+
+  if (!courseId) {
+    return <p>Invalid course ID.</p>;
+  }
+
   return (
     <div>
       {selectedCourse ? (
