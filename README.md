@@ -46,4 +46,4 @@ Preview and download the final certificate as a new PDF.
   npm run dev
 
 #Live Demo URL
-https://cirtificate-issuance-system-f42s.vercel.app/certificate/fill-details
+https://cirtificate-issuance-system.vercel.app/
