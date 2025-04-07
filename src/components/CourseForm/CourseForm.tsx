@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import "../../assets/FormStyle.scss";
 import { useCourseContext } from "../../contexts/CourseContext";
 import { useNavigate } from "react-router-dom";
-import { CourseData } from "../Types/Types";
+import { CourseData } from "../../Types/Types";
 
 const initialForm: CourseData = {
   id: "",

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { CourseData } from "../Types/Types";
+import { CourseData } from "../../Types/Types";
 import { usePDFEditorContext } from "../../contexts/PDFEditorContext";
 import "../../assets/FormStyle.scss";
 

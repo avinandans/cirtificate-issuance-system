@@ -1,6 +1,6 @@
 // PDFEditorContext.tsx
 import React, { createContext, useContext, useState } from "react";
-import { CourseData } from "../components/Types/Types";
+import { CourseData } from "../Types/Types";
 
 type PDFEditorContextType = {
   pdfFile: File | null;

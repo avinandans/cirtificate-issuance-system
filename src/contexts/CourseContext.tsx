@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { CourseContextType, CourseData } from "../components/Types/Types";
+import { CourseContextType, CourseData } from "../Types/Types";
 
 const CourseContext = createContext<CourseContextType | undefined>(undefined);
 
