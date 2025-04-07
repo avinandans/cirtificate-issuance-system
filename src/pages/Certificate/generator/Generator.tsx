@@ -3,8 +3,7 @@ import { QRCodeSVG } from "qrcode.react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import * as pdfjsLib from "pdfjs-dist";
-import { GlobalWorkerOptions } from 'pdfjs-dist/build/pdf';
-GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js`;
 import { usePDFEditorContext } from "../../../contexts/PDFEditorContext";
 import "./Generator.scss";
 
